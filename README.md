@@ -5,6 +5,7 @@ Didn't make it far last time before having to break the streak. This year I am g
 Started the LeetCode 75 Interview Question prep. Today's problem was to merge strings alternately. I used javascript to solve this problem writing a series of conditionals with nested loops. First I split each word into a seperate array and then pushed each index of the array in alteranting order until both words were finished
 
  - https://github.com/rybaier/100-days-of-code/blob/master/js%20playground/index.js lines 124 - 150 
+ - day 1
 
 ## Day 2
  today's leetcode was the Greatest Common Divisor of strings. I attempted several approaches and it took me longer than I would have liked but I got there in the end after finally resorting reading the editorial and discussions before coming up with an answer that was acceptable. I first spent time trying to run the answer with regular expression matching but it wasn't good for all test cases. The next approach was a combination of arrays and string methods and conditional operators I was much closer with this but it still failed about 20% of the test cases. I finally came around to a simple math method with a for loop that passed all test cases though the memory usage was high.
