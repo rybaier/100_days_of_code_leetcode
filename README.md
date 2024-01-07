@@ -35,6 +35,7 @@ fnished yesterday's problem after some thoughts overnight. I also completed toda
  reverse all the words in a string, make sure there are no extra spaces 
   - https://github.com/rybaier/100-days-of-code/blob/master/js%20playground/index.js 
  - lines 410 - 437 
+ - Jan 7
 
 # 
 
