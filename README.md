@@ -29,6 +29,7 @@ fnished yesterday's problem after some thoughts overnight. I also completed toda
   today's leetcode problem was to reverse all the vowels in a string. 
  - https://github.com/rybaier/100-days-of-code/blob/master/js%20playground/index.js 
  - lines 410 - 437 
+ - Jan 6
 
  ## Day 6 
  reverse all the words in a string, make sure there are no extra spaces 
