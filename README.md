@@ -23,6 +23,7 @@ fnished yesterday's problem after some thoughts overnight. I also completed toda
  - https://github.com/rybaier/100-days-of-code/blob/master/js%20playground/index.js 
  - lines 209 - 379 are the problem I struggled with
  - lines 380 - 408
+ - Jan 5
 
  ## Day 5 
   today's leetcode problem was to reverse all the vowels in a string. 
