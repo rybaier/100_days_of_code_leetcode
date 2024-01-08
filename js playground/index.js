@@ -465,3 +465,58 @@ var reverseWords = function(s) {
 
 // reverseWords("  the sky is blue ")
 
+// Given an integer array nums, return an array answer such that answer[i] 
+// is equal to the product of all the elements of nums except nums[i].
+// The product of any prefix or suffix of nums 
+// is guaranteed to fit in a 32-bit integer.
+
+// You must write an algorithm that runs in 
+// O(n) time and without using the division operation.
+
+var productExceptSelf = function (nums) {
+//   THE FOLLOWING uses O(n^2) time first solution
+    
+    // let currentProduct = null
+    // const numberArray = nums
+    // for (i=0; i<nums.length; i++){
+    //     console.log(numberArray)
+    //     let tempArray = numberArray.slice(0)
+    //     console.log(tempArray,'currentarray')
+    //     console.log(tempArray[i], 'index')
+    //     tempArray.splice(i, 1)
+    //     console.log(tempArray, 'new array')
+    //     currentProduct = tempArray.reduce((accumlator, currentValue)=>
+    //     accumlator * currentValue)
+    //     console.log(currentProduct,'product')
+    //     productArray.push(currentProduct)
+    //     tempArray = numberArray.slice(0)
+    //     console.log(tempArray, 'reset')
+    // }
+    // console.log(productArray)
+    // return productArray
+//  THIS SOLUTION USES O(n) time
+// rather run nested loops making the same calculations over and over calculating 
+// every single product
+//  we can get the products by calculating all the products to the left 
+// then all the products to the right and the calulate the product of each 
+// thus giving us the correct product for each index
+let productArray =[]
+let leftProduct = 1;
+let rightProduct = 1;
+for (let i = 0; i < nums.length; i++) {
+  productArray[i] = leftProduct
+  leftProduct *= nums[i]
+}
+
+for (let i = nums.length - 1; i >= 0; i--) {
+    productArray[i] *= rightProduct
+    rightProduct *= nums[i]
+}
+
+console.log(productArray)
+
+return productArray;
+
+};
+
+productExceptSelf([1,2,3,4])
