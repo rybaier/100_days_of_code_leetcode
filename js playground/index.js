@@ -519,4 +519,118 @@ return productArray;
 
 };
 
-productExceptSelf([1,2,3,4])
+// productExceptSelf([1,2,3,4])
+
+
+// Given an integer array nums, return true  if there exists a triple of indices (i, j, k) 
+// such that i < j < k and nums[i] < nums[j] < nums[k]. // If no such indices exists, return false.
+
+var increasingTriplet = function(nums){
+
+    let lowMarker = Infinity
+    let midMarker = Infinity
+    for (let current of nums){
+        if (current > midMarker){
+            return true
+        }
+        if(current > lowMarker){
+            midMarker = current
+        } else {
+            lowMarker = current
+        }
+    }
+    return false
+
+    // for (i = 0; i< nums.length; i++) {
+    //     console.log(lowMarker, midMarker)
+    //     if (nums[i] <= lowMarker) {
+    //         lowMarker = nums[i]
+    //     }else if (nums[i] <= midMarker && midMarker > lowMarker){
+    //         midMarker = nums[i]
+    //     } else{
+    //         return true
+    //     }
+    // }
+
+
+    // let lowMarker = null
+    // let midMarker = null
+    // let highMarker = null
+    // let lowestIndex = null
+    // let middleIndex = null
+    // let highestIndex = null
+    // let trueCondition = 0
+    // if (nums.length<3 || 0 === nums.length) return false
+    // for (i = 0, j = 1, k = 2; i<nums.length; i++, j++, k++){
+    //     if (nums[i] < nums[j] && nums[j] < nums[k]) {
+    //         trueCondition+=1, true 
+    //         // console.log(nums[i], nums[j], nums[k])
+    //         //   if any three in a row are true
+    //     }
+        // if (nums[i] < nums[j] && nums[j] > nums[k]) {
+        //     lowMarker = nums[i]
+        //     lowestIndex = nums[i]
+        //     midMarker = nums[j]
+        //     middleIndex = nums[j]
+        //     // break
+        // }
+        // if (nums[lowestIndex] < nums[j] && nums[j] < nums[k]) {
+        //     middleIndex = nums[j]
+        //     midMarker = nums[j]
+        //     trueCondition+=1
+        // }
+    //     if (nums[i] < nums[j] && lowestIndex > i) {
+    //         lowestIndex = nums[i]
+    //     }
+    //     if(nums[j] < middleIndex){
+    //         middleIndex = nums[j]
+    //     }
+    //     if (nums[j] < nums[k]) {
+    //         highestIndex = nums[k]
+    //     }
+    //     console.log(nums[i], nums[j],nums[k],' nums')
+    //     console.log(lowestIndex, 'low', lowMarker)
+    //     console.log( middleIndex, 'middle', midMarker)
+    //     console.log(highestIndex,  'high')
+
+    // }
+    // (lowestIndex < middleIndex && middleIndex < highestIndex) ? ( trueCondition+=1, console.log(true)) : (false,console.log(false))
+    // return (trueCondition>=1)? true : false
+
+    // return (trueCondition>=1)? true : false, console.log((trueCondition>=1)? true : false) 
+    // let k =  2
+    // let j = 1
+    // let i = 0
+    // let trueCondition = 0
+    // let firstConditionIndex = 0 
+    // let secondConditionIndex = 0
+    
+    // if (nums.length<3 || i === nums.length) return false
+  
+    //     for(i = 0; i<nums.length; i++, j++, k++){
+    //           if (nums[i] < nums[j] && nums[j] < nums[k]) {
+    //             trueCondition+=1, true            ,
+    //             console.log(nums[i], nums[j], nums[k])               
+    //         }
+    //         if (nums[i] < nums[j] && nums[j] > nums[k]) {
+    //             firstConditionIndex = i
+    //             secondConditionIndex = j
+    //             console.log(firstConditionIndex)
+    //             // break
+    //         }
+          
+    //     }  
+    //     console.log("starting")      
+    //     if (trueCondition>=1) return true   
+    //     for ( i = secondConditionIndex, k = secondConditionIndex + 1; k<nums.length;i++, k++){
+    //                 secondCondition =(nums[firstConditionIndex] < nums[secondConditionIndex] 
+    //                 && nums[secondConditionIndex] < nums[k]) ? (trueCondition+=1) : false
+    //                 console.log(nums[firstConditionIndex], nums[k], secondCondition, 'working')
+    //                 thirdCondition = (nums[firstConditionIndex] < nums[i] 
+    //                 && nums[i] < nums[k]) ? (trueCondition+=1) : false
+    //             }
+  
+    //     return (trueCondition>=1)? true : false, console.log((trueCondition>=1)? true : false) 
+};
+
+increasingTriplet([9,10,5,11,10,9,8])
