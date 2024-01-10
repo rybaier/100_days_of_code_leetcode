@@ -633,4 +633,72 @@ var increasingTriplet = function(nums){
     //     return (trueCondition>=1)? true : false, console.log((trueCondition>=1)? true : false) 
 };
 
-increasingTriplet([9,10,5,11,10,9,8])
+// increasingTriplet([9,10,5,11,10,9,8])
+
+// Given an array of characters chars, compress it using the following algorithm:
+
+// Begin with an empty string s. For each group of consecutive repeating characters in chars:
+
+// If the group's length is 1, append the character to s.
+// Otherwise, append the character followed by the group's length.
+// The compressed string s should not be returned separately, but instead, 
+// be stored in the input character array chars. Note that group lengths that are 10 or longer 
+// will be split into multiple characters in chars.
+
+// After you are done modifying the input array, return the new length of the array.
+
+// You must write an algorithm that uses only constant extra space.
+
+var compress = function(chars) {
+    // let group = 0
+    // let groupCounter = 0
+    // let s = []
+    // for (let i = 0; i<chars.length; i++) {
+    //     console.log('starting')
+    //     s.push(chars[i])
+    //     groupCounter= i+1
+    //     console.log(chars[i], chars[groupCounter], 'current CHARACTERS')
+    //     do { if (chars[i] == chars[groupCounter]){
+    //         console.log(chars[groupCounter], chars[i], 'next set')
+    //         groupCounter++
+    //         console.log(groupCounter,'count')
+    //     }
+    //     } while (chars[group] ==chars[groupCounter])
+    //     group = groupCounter - i
+    //     console.log(group, 'GROUP')
+    //     s.push(group)
+    //     console.log(s, i)
+    //     }   
+        
+    //     console.log(s.length)
+
+
+//  Final solution took about an hour to get to this
+    let i = 0, j = 0;
+    while (i < chars.length) {
+        chars[j++] = chars[i];
+        let count = 1;
+        while (i + 1 < chars.length && chars[i] === chars[i + 1]) {
+            i++;
+            count++;
+        }
+        if (count > 1) {
+            for (let digit of count.toString()) chars[j++] = digit;
+        }
+        i++;
+    }
+    console.log(j)
+    return j;
+}
+
+// compress(["a","a","b","b","c","c","c"])
+
+// Given an integer array nums, move all 0's to the end of it while 
+// maintaining the relative order of the non-zero elements.
+
+// Note that you must do this in-place without making a copy of the array.
+// var moveZeroes = function(nums) {
+//     let endPosition = nums.length -1
+
+
+// };
