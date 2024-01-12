@@ -697,8 +697,67 @@ var compress = function(chars) {
 // maintaining the relative order of the non-zero elements.
 
 // Note that you must do this in-place without making a copy of the array.
-// var moveZeroes = function(nums) {
-//     let endPosition = nums.length -1
+var moveZeroes = function(nums) {
+    let zeros = null
+//    this bit is unnecessary as I can count the zeros as I splice
+    // nums.forEach((num) => {
+    //     if (num ==0) zeros++
+    // })
+    for (i=0;i<nums.length; i++){
+        if (nums[i] == 0){
+            nums.splice(i,1)
+            i--
+            zeros++
+        }
+    }
+      while(zeros >0){
+        nums.push(0)
+        zeros--
+    }
+    console.log(nums)
+  
+    return nums
+};
 
+// moveZeroes([0,1,0,3,12])
 
-// };
+// Given two strings s and t, return true if s is a subsequence of t, or false otherwise.
+
+// A subsequence of a string is a new string that is formed from the original string by deleting some (can be none)
+//  of the characters without disturbing the relative positions of the remaining characters. 
+// (i.e., "ace" is a subsequence of "abcde" while "aec" is not).
+
+var isSubsequence = function (s,t){
+    let j = 0
+    let i = 0
+
+    while(i < s.length && j < t.length){
+        if (s[i] == t[j]){
+            i++
+        } 
+        if (i == s.length){
+         return true
+        
+        } else {
+            j++
+        }
+      
+    }
+    console.log((i == s.length) ? true : false)
+    return false
+    
+//  THE FOLLOWING WAS THE FASTEST RUNTIME ON LEETCODE
+    // if(s.length > t.length) return false;
+
+    // const t_length = t.length;
+    // let subsequence = 0;
+
+    // for(let i=0; i<t_length; i++) {
+    //     if(s[subsequence] === t[i]){
+    //         subsequence++;
+    //     }
+    // }
+    // return subsequence === s.length;
+};
+
+isSubsequence('abc', 'ahbgdc')
