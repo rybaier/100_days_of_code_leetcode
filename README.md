@@ -34,8 +34,35 @@ fnished yesterday's problem after some thoughts overnight. I also completed toda
  ## Day 6 
  reverse all the words in a string, make sure there are no extra spaces 
   - https://github.com/rybaier/100-days-of-code/blob/master/js%20playground/index.js 
- - lines 410 - 437 
- - Jan 7
+  - lines 410 - 437 
+  - Jan 7
 
-# 
+## Day 8 
+a problem that gave me some difficulty after solving it once but not in the proper time complexity. I had to research what I was missing to find the mathmatical algorithum to get it to the correct time complexity.
+ - https://github.com/rybaier/100-days-of-code/blob/master/js%20playground/index.js 
+ - lines 468 - 522 
+ - Jan 8
 
+## Day 9 
+a problem I vastly overcomplicated for far too long and in the end found a simple solution
+ - lines 525 -636
+ - https://github.com/rybaier/100-days-of-code/blob/master/js%20playground/index.js 
+ - Jan 9
+
+## Day 10
+ a moderate problem, I understood the necessary logic and wrote it out on paper. Implenting the code took a while and I had trouble trying to reduce the code to what I knew it could be.  continually getting endless loops until I got the correct set of conditions
+ - lines 638 - 694
+ - https://github.com/rybaier/100-days-of-code/blob/master/js%20playground/index.js 
+ - Jan 10
+
+ ## Day 11 
+ an easy problem that I spent time trying to reduce my total number of operations. The solution that I ended with while 2 operations seems the best for any testcase I could think of.
+ - line 696 -722
+ - https://github.com/rybaier/100-days-of-code/blob/master/js%20playground/index.js 
+ - Jan 11
+
+ ## Day 12 
+ easier problem today, wrote it in pen first then typed it out. Had to rearrange where I put the inrement after i reached a false test case and then it passed all
+ - lines 724 -763
+ - https://github.com/rybaier/100-days-of-code/blob/master/js%20playground/index.js 
+ - Jan 12
