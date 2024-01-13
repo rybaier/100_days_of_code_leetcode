@@ -66,3 +66,9 @@ a problem I vastly overcomplicated for far too long and in the end found a simpl
  - lines 724 -763
  - https://github.com/rybaier/100-days-of-code/blob/master/js%20playground/index.js 
  - Jan 12
+
+ ## Day 13 
+ This one came easily again writing my thoughts in pen first helped me work the code out much faster
+  - lines 724 -763
+ - https://github.com/rybaier/100-days-of-code/blob/master/js%20playground/index.js 
+ - Jan 12
