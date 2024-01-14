@@ -69,6 +69,12 @@ a problem I vastly overcomplicated for far too long and in the end found a simpl
 
  ## Day 13 
  This one came easily again writing my thoughts in pen first helped me work the code out much faster
-  - lines 724 -763
+  - lines 765-795
  - https://github.com/rybaier/100-days-of-code/blob/master/js%20playground/index.js 
- - Jan 12
+ - Jan 13
+
+  ## Day 13 
+I had the concept right but I got stuck trying to implement it with a while loop. Once I figured out to use a hashmap for keeping track it worked out much better
+- lines 797 - 854
+ - https://github.com/rybaier/100-days-of-code/blob/master/js%20playground/index.js 
+ - Jan 14

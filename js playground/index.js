@@ -760,7 +760,7 @@ var isSubsequence = function (s,t){
     // return subsequence === s.length;
 };
 
-isSubsequence('abc', 'ahbgdc')
+// isSubsequence('abc', 'ahbgdc')
 
 // You are given an integer array height of length n. 
 // There are n vertical lines drawn such that the two endpoints of the ith line are (i, 0) and (i, height[i]).
@@ -793,3 +793,62 @@ function maxArea(height) {
 }
 
 // console.log(maxArea([1, 8, 6, 2, 5, 4, 8, 3, 7])); 
+
+// You are given an integer array nums and an integer k.
+// In one operation, you can pick two numbers from the array whose sum equals k and remove them from the array.
+// Return the maximum number of operations you can perform on the array.
+
+var maxOperations = function(nums, k) {
+    const numCount = new Map();
+    let operations = 0;
+
+    for (const num of nums) {
+        const complement = k - num;
+
+        if (numCount.get(complement) > 0) {
+            operations++;
+            numCount.set(complement, numCount.get(complement) - 1);
+        } else {
+            numCount.set(num, (numCount.get(num) || 0) + 1);
+        }
+    }
+
+    return operations;
+
+// still fails going to try a hashmap
+    // let operations = 0
+    // let i = 0
+    // let j = nums.length-1
+    // while(i < j){
+    //     if( nums[0] + nums[j] == k){
+    //         nums.pop()
+    //         nums.shift()
+    //         operations++
+    //         j = nums.length-1
+    //     } else if(nums[i] + nums[j] != k){
+    //         i++
+    //     } else{
+    //         nums.pop()
+    //         nums.shift()
+    //         operations++
+    //     }
+    // }
+    // return operations
+
+// passes some of test cases not all. what am i missing here?
+    // let operations = 0
+    // let i = 0
+    // let j = nums.length-1
+    // while (i < j){
+    //         if(nums[i] + nums[j] != k){
+    //           j--
+    //           i++
+    //         } else {
+    //             operations++
+    //             j--
+    //             i++
+    //         }
+    //     }
+    // return operations
+};
+console.log(maxOperations([1,2,3,4], 5))
