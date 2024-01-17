@@ -851,4 +851,53 @@ var maxOperations = function(nums, k) {
     //     }
     // return operations
 };
-console.log(maxOperations([1,2,3,4], 5))
+// console.log(maxOperations([1,2,3,4], 5))
+
+// You are given an integer array nums consisting of n elements, and an integer k.
+
+// Find a contiguous subarray whose length is equal to k that has the maximum average value
+//  and return this value. Any answer with a calculation error less than 10^-5 will be accepted.
+
+var findMaxAverage = function(nums, k) {
+    let sum = nums.slice(0, k).reduce((acc, num) => acc + num, 0);
+
+    let maxSum = sum;
+
+    nums.slice(k).forEach((num, index) => {
+        sum = sum - nums[index] + num;
+        maxSum = Math.max(maxSum, sum);
+    });
+
+    return maxSum / k;
+};
+
+// console.log(findMaxAverage([1,12,-5,-6,50,3], 4))
+
+// Given a string s and an integer k, return the maximum number of vowel letters 
+// in any substring of s with length k.
+// Vowel letters in English are 'a', 'e', 'i', 'o', and 'u'.
+
+var maxVowels = function(s, k) {
+
+// create a set of vowels
+    const vowels = new Set(['a', 'e', 'i', 'o', 'u']);
+    
+// Convert the input string to lowercase and create an array isVowel based on vowels Set.
+    const isVowel = Array.from(s.toLowerCase(), char => vowels.has(char));
+
+// Calculate the vowel count for the first window of size k using reduce.
+    const initialVowelCount = isVowel.slice(0, k).reduce((count, isVowel) => count + isVowel, 0);
+    let maxVowelCount = initialVowelCount;
+    
+// Iterate through the string starting from index k.
+    for (let i = k; i < s.length; i++) {
+// Update the vowel count based on the current character.
+        initialVowelCount += isVowel[i] - isVowel[i - k];
+// Update the maximum vowel count.
+        maxVowelCount = Math.max(maxVowelCount, initialVowelCount);
+    }
+
+    return maxVowelCount;
+    
+};
+console.log(maxVowels("abcIIIdef", 3))

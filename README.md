@@ -78,3 +78,17 @@ I had the concept right but I got stuck trying to implement it with a while loop
 - lines 797 - 854
  - https://github.com/rybaier/100-days-of-code/blob/master/js%20playground/index.js 
  - Jan 14
+
+## Day 14 
+Easier problem today, maximum average with a sliding window
+ - lines  856 - 874
+ - https://github.com/rybaier/100-days-of-code/blob/master/js%20playground/index.js 
+ - Jan 15
+
+ ## Day 15 
+a sliding window for consecutive vowels 
+ - lines  876 - 903
+ - https://github.com/rybaier/100-days-of-code/blob/master/js%20playground/index.js 
+ - Jan 15
+
+ 
