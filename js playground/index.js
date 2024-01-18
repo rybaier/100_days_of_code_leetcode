@@ -886,7 +886,7 @@ var maxVowels = function(s, k) {
     const isVowel = Array.from(s.toLowerCase(), char => vowels.has(char));
 
 // Calculate the vowel count for the first window of size k using reduce.
-    const initialVowelCount = isVowel.slice(0, k).reduce((count, isVowel) => count + isVowel, 0);
+    let initialVowelCount = isVowel.slice(0, k).reduce((count, isVowel) => count + isVowel, 0);
     let maxVowelCount = initialVowelCount;
     
 // Iterate through the string starting from index k.
@@ -900,4 +900,57 @@ var maxVowels = function(s, k) {
     return maxVowelCount;
     
 };
-console.log(maxVowels("abcIIIdef", 3))
+// console.log(maxVowels("abcIIIdef", 3))
+
+// Given a binary array nums and an integer k, 
+// return the maximum number of consecutive 1's in the array if you can flip at most k 0's.
+
+var longestOnes = function(nums, k) {
+    let zeroCount = 0;
+    let maxLen = 0;
+    let left = 0;
+
+    nums.forEach((num, right) => {
+        zeroCount += num === 0 ? 1 : 0;
+
+        while (zeroCount > k) {
+            zeroCount -= nums[left++] === 0 ? 1 : 0;
+        }
+
+        maxLen = Math.max(maxLen, right - left + 1);
+    });
+
+    return maxLen;
+};
+
+// console.log(longestOnes([1,1,1,0,0,0,1,1,1,1,0], 2))
+
+// Given a binary array nums, you should delete one element from it.
+
+// Return the size of the longest non-empty subarray containing only 1's in the resulting array.
+// Return 0 if there is no such subarray.
+
+var longestSubarray = function(nums) {
+    let maxLen = 0;
+    let zeroCount = 0;
+    let left = 0;
+
+    for (let right = 0; right < nums.length; right++) {
+        // Increment zeroCount if the current number is 0, otherwise, add 0.
+        zeroCount += nums[right] === 0 ? 1 : 0;
+
+        // Slide the window by moving the left pointer when zeroCount exceeds 1.
+      
+        while (zeroCount > 1) {
+            zeroCount -= nums[left++] === 0 ? 1 : 0;
+        }
+
+        // Update maxLen with the length of the current window.
+        maxLen = Math.max(maxLen, right - left + 1);
+    }
+
+    // Return the maximum consecutive 1's length.
+    return maxLen > 0 ? maxLen - 1 : 0; // Subtract 1 only if there are 1's in the array.
+};
+
+console.log(longestSubarray([1,1,0,1]))

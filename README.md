@@ -86,9 +86,20 @@ Easier problem today, maximum average with a sliding window
  - Jan 15
 
  ## Day 15 
-a sliding window for consecutive vowels 
+a sliding window for consecutive vowels medium level took a bit of time
  - lines  876 - 903
  - https://github.com/rybaier/100-days-of-code/blob/master/js%20playground/index.js 
- - Jan 15
+ - Jan 16
 
+## Day 16 
+max consecutive 1's sliding window medium level took less time than yesterday
+ - lines 905-926
+ - https://github.com/rybaier/100-days-of-code/blob/master/js%20playground/index.js 
+ - Jan 17
+ 
+ ## Day 17
+ longest subarray of 1's sliding window used a similary approach as yesterday
+ - lines 926 - 956
+ - https://github.com/rybaier/100-days-of-code/blob/master/js%20playground/index.js 
+ - Jan 18
  
