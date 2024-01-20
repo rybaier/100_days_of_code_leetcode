@@ -953,4 +953,70 @@ var longestSubarray = function(nums) {
     return maxLen > 0 ? maxLen - 1 : 0; // Subtract 1 only if there are 1's in the array.
 };
 
-console.log(longestSubarray([1,1,0,1]))
+// console.log(longestSubarray([1,1,0,1]))
+
+function generateHashtag (str) {
+    // OPTIMIZED Solution
+    const words = str.split(' ')
+    const hashtag =  words.map((word) => word.charAt(0).toUpperCase()+ word.slice(1)).join('')
+
+    return (hashtag.length < 140  && hashtag.length > 0) ? `#${hashtag}` : false
+    
+// FIRST Solution
+    // let words = str.split(' ')
+    // console.log(words.length)
+    // let hashtag =  words.map((word) => word.charAt(0).toUpperCase()+ word.slice(1)).join('')
+    // if (hashtag.length < 140  && hashtag.length >=1){
+    //     return `#${hashtag}`, hashtag.length
+    // } else{
+    //   return false
+    // }
+  }
+//   console.log(generateHashtag('    n      '))
+
+// There is a biker going on a road trip. The road trip consists of n + 1 points at different altitudes.
+//  The biker starts his trip on point 0 with altitude equal 0.
+
+// You are given an integer array gain of length n 
+// where gain[i] is the net gain in altitude between points i​​​​​​ and i + 1 for all (0 <= i < n). 
+// Return the highest altitude of a point.
+
+var largestAltitude = function(gain) {
+    let altitude = 0
+    let maxAltitude = 0
+    for (i = 0; i < gain.length; i++){
+        altitude += gain[i]
+        maxAltitude = Math.max(maxAltitude, altitude)
+    }
+    return maxAltitude
+}
+// console.log(largestAltitude([-5,1,5,0,-7]))
+
+// Given an array of integers nums, calculate the pivot index of this array.
+
+// The pivot index is the index where the sum of all the numbers strictly 
+// to the left of the index is equal to the sum of all the numbers strictly to the index's right.
+
+// If the index is on the left edge of the array, then the left sum is 0 
+// because there are no elements to the left. This also applies to the right edge of the array.
+
+// Return the leftmost pivot index. If no such index exists, return -1.
+
+var pivotIndex = function(nums) {
+    // Calculate the total sum of the array using the reduce method.
+    const totalSum = nums.reduce((acc, num) => acc + num, 0);
+    // Initialize a variable to keep track of the sum of elements to the left.
+    let leftSum = 0;
+    for (let i = 0; i < nums.length; i++) {
+    //  Check if the sum of elements to the left is equal to the sum of elements to the right.
+        if (leftSum === totalSum - leftSum - nums[i]) {
+            return i;
+        }
+    // calculate the new leftSum
+        leftSum += nums[i];
+    }
+    // If no pivot index is found, return -1.
+    return -1;
+};
+
+// console.log(pivotIndex([1,7,3,6,5,6]))

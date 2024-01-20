@@ -102,4 +102,17 @@ max consecutive 1's sliding window medium level took less time than yesterday
  - lines 926 - 956
  - https://github.com/rybaier/100-days-of-code/blob/master/js%20playground/index.js 
  - Jan 18
+
+## Day 18
+ did  a problem on codewars today instead for generating hashtags. I ended up on codewars randomly and the problem looked fun. I solved it once then refactored it to 3 lines
+ - lines 958 - 975
+ - https://github.com/rybaier/100-days-of-code/blob/master/js%20playground/index.js 
+ - Jan 19
  
+## Day 19
+ easier problem today. did a second.
+ - lines 977 - 993
+ - https://github.com/rybaier/100-days-of-code/blob/master/js%20playground/index.js 
+ - Jan 20
+
+1021
