@@ -1020,3 +1020,45 @@ var pivotIndex = function(nums) {
 };
 
 // console.log(pivotIndex([1,7,3,6,5,6]))
+
+// count all the occurring characters in a string. 
+// If you have a string like aba, then the result should be {'a': 2, 'b': 1}.
+
+// What if the string is empty? Then the result should be empty object literal, {}.
+
+function count(string) {
+    let result = {}
+    for (let char of string){
+        // Check if the character is already a key in the result object.
+        // If yes, increment its count; if not, initialize its count to 1.
+      result[char] = (result[char] || 0) + 1
+    //   console.log(result)
+    }
+   return result
+ }
+//  console.log(count('absdfsdfsdfsdfa'))
+
+// Given two 0-indexed integer arrays nums1 and nums2, return a list answer of size 2 where:
+
+// answer[0] is a list of all distinct integers in nums1 which are not present in nums2.
+// answer[1] is a list of all distinct integers in nums2 which are not present in nums1.
+// Note that the integers in the lists may be returned in any order.
+
+const findDifference = (nums1, nums2) => {
+        // Create two sets to store distinct integers from nums1 and nums2.
+        const set1 = new Set(nums1);
+        const set2 = new Set(nums2);
+    
+        // Use filter to find distinct integers in nums1 not present in nums2.
+        const result1 = [...set1].filter(num => !set2.has(num));
+    
+        // Use filter to find distinct integers in nums2 not present in nums1.
+        const result2 = [...set2].filter(num => !set1.has(num));
+    
+        // Combine the results into an array containing two subarrays.
+        const result = [result1, result2];
+    
+        return result;
+};
+
+console.log(findDifference([1,2,3,], [2,4,6]))
