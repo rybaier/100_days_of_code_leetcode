@@ -115,3 +115,8 @@ max consecutive 1's sliding window medium level took less time than yesterday
  - https://github.com/rybaier/100-days-of-code/blob/master/js%20playground/index.js 
  - Jan 20
 
+## Day 20
+ easier problem today. did a second.
+ - lines 1041 - 1064
+ - https://github.com/rybaier/100-days-of-code/blob/master/js%20playground/index.js 
+ - Jan 21
