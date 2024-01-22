@@ -116,7 +116,13 @@ max consecutive 1's sliding window medium level took less time than yesterday
  - Jan 20
 
 ## Day 20
- easier problem today. did a second.
+a new problem type involving Sets
  - lines 1041 - 1064
  - https://github.com/rybaier/100-days-of-code/blob/master/js%20playground/index.js 
  - Jan 21
+
+ ## Day 21
+this problem required both a Hashmap and a Set to solve 
+ - lines 1066 -1081
+ - https://github.com/rybaier/100-days-of-code/blob/master/js%20playground/index.js 
+ - Jan 22

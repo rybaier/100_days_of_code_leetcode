@@ -1061,4 +1061,21 @@ const findDifference = (nums1, nums2) => {
         return result;
 };
 
-console.log(findDifference([1,2,3,], [2,4,6]))
+// console.log(findDifference([1,2,3,], [2,4,6]))
+
+// Given an array of integers arr, return true if the number of occurrences 
+// of each value in the array is unique or false otherwise.
+
+const uniqueOccurences = (arr) => {
+    const countMap = new Map();
+
+    // Count occurrences of each value in the array.
+    for (const num of arr) {
+        countMap.set(num, (countMap.get(num) || 0) + 1);
+    }
+
+    // Check if the counts are unique.
+    const uniqueCounts = new Set(countMap.values());
+    return uniqueCounts.size === countMap.size;
+};
+console.log(uniqueOccurences([1,2,2,1,1,3]))
