@@ -126,3 +126,9 @@ this problem required both a Hashmap and a Set to solve
  - lines 1066 -1081
  - https://github.com/rybaier/100-days-of-code/blob/master/js%20playground/index.js 
  - Jan 22
+
+## Day 22
+2 solutions for this problem 1 using hashmaps and the 2nd usin Array methods and Sets to solve 
+ - lines 1083 -1150
+ - https://github.com/rybaier/100-days-of-code/blob/master/js%20playground/index.js 
+ - Jan 23
