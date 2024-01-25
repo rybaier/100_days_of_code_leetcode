@@ -1149,3 +1149,39 @@ var closeStrings = function(word1, word2) {
         return freq1 === freq2 && set1 === set2;
     };
 
+    // You are given a string s, which contains stars *.
+
+    // In one operation, you can:
+    
+    // Choose a star in s.
+    // Remove the closest non-star character to its left, as well as remove the star itself.
+    // Return the string after all stars have been removed.
+    
+    // Note:
+    
+    // The input will be generated such that the operation is always possible.
+    // It can be shown that the resulting string will always be unique.
+    
+    var removeStars = function(s){
+//   Exceeded time limit for large inputs
+        // let array = s.split('')
+        // while (array.includes('*')){
+        //     for(i=0;i<array.length;i++){
+        //         if(array[i]=== '*'){
+        //             array.splice(i-1,2)
+        //             i-=2
+        //         }
+        //     }
+        // }
+        // return array.join('')
+    let result = [];
+    for (let i = 0; i < s.length; i++) {
+        if (s[i] === '*' && result.length > 0) {
+            result.pop(); // Remove the preceding character
+        } else if (s[i] !== '*') {
+            result.push(s[i]);
+        }
+    }
+    return result.join('')
+    }
+    console.log(removeStars('iI*'))

@@ -132,3 +132,11 @@ this problem required both a Hashmap and a Set to solve
  - lines 1083 -1150
  - https://github.com/rybaier/100-days-of-code/blob/master/js%20playground/index.js 
  - Jan 23
+
+ ## Day 23 
+ had to skip yesterday as I was away from the computer all day and into the night. Today's problem was pretty quick. Had one solution that exceeded the time limit. After a little bit I figured out how to adjust it so it worked correctly with large scale inputs 
+ - lines 1152 - 1187
+ - https://github.com/rybaier/100-days-of-code/blob/master/js%20playground/index.js 
+ - Jan 25
+
+ 
