@@ -139,4 +139,9 @@ this problem required both a Hashmap and a Set to solve
  - https://github.com/rybaier/100-days-of-code/blob/master/js%20playground/index.js 
  - Jan 25
 
+ ## Day 24 
+had to spend some time figuring this one out. and it took some research as well
+ - lines 1189 - 1187
+ - https://github.com/rybaier/100-days-of-code/blob/master/js%20playground/index.js 
+ - Jan 26
  

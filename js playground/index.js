@@ -1184,4 +1184,49 @@ var closeStrings = function(word1, word2) {
     }
     return result.join('')
     }
-    console.log(removeStars('iI*'))
+    // console.log(removeStars('iI*'))
+
+    // Given a 0-indexed n x n integer matrix grid, return the number of pairs (ri, cj)
+    //  such that row ri and column cj are equal.
+
+    // A row and column pair is considered equal if they contain the same 
+    // elements in the same order (i.e., an equal array).
+
+    var equalPairs = function(grid) {
+        const n = grid.length;
+        let count = 0;
+    
+        for (let i = 0; i < n; i++) {
+            for (let j = 0; j < n; j++) {
+                // Check if row i is equal to column j
+                if (isEqual(grid[i], getColumn(grid, j))) {
+                    count++;
+                }
+            }
+        }
+    
+        return count;
+    };
+    
+    // Helper function to get a column from the grid
+    function getColumn(grid, colIndex) {
+        return grid.map(row => row[colIndex]);
+    }
+    
+    // Helper function to check if two arrays are equal
+    function isEqual(arr1, arr2) {
+        if (arr1.length !== arr2.length) {
+            return false;
+        }
+    
+        for (let i = 0; i < arr1.length; i++) {
+            if (arr1[i] !== arr2[i]) {
+                return false;
+            }
+        }
+    
+        return true;
+    }
+    
+    console.log(equalPairs([[3,2,1],[1,7,6],[2,7,7]]))
+    
