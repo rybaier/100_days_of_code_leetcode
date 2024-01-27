@@ -141,7 +141,13 @@ this problem required both a Hashmap and a Set to solve
 
  ## Day 24 
 had to spend some time figuring this one out. and it took some research as well
- - lines 1189 - 1187
+ - lines 1189 - 1231
  - https://github.com/rybaier/100-days-of-code/blob/master/js%20playground/index.js 
  - Jan 26
+
+  ## Day 25 
+worked on it for 30 min still failing the current test case
+ - lines 1231 - 1280
+ - https://github.com/rybaier/100-days-of-code/blob/master/js%20playground/index.js 
+ - Jan 27
  

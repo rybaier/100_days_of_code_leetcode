@@ -1228,5 +1228,53 @@ var closeStrings = function(word1, word2) {
         return true;
     }
     
-    console.log(equalPairs([[3,2,1],[1,7,6],[2,7,7]]))
+    // console.log(equalPairs([[3,2,1],[1,7,6],[2,7,7]]))
     
+    // We are given an array asteroids of integers representing asteroids in a 
+    // row.
+
+    // For each asteroid, the absolute value represents its size, 
+    // and the sign represents its direction (positive meaning right,
+    //      negative meaning left). Each asteroid moves at the same speed.
+    
+    // Find out the state of the asteroids after all collisions. 
+    // If two asteroids meet, the smaller one will explode.
+    //  If both are the same size, both will explode.
+    //  Two asteroids moving in the same direction will never meet.
+
+    var asteroidCollision = function(asteroids) {
+        const stack = [];
+    
+        for (const asteroid of asteroids) {
+            if (asteroid > 0) {
+                // Asteroid moving to the right, just push it onto the stack
+               console.log(stack.push(asteroid))
+            } else {
+                // Asteroid moving to the left
+                while (stack.length > 0 && stack[stack.length -1] > 0) {
+                    // Check for collisions
+                    const lastAsteroid = stack.pop();
+                    console.log(lastAsteroid)
+                    if (lastAsteroid === Math.abs(asteroid)) {
+                        // Both asteroids explode
+                        break; // Skip pushing asteroid onto stack
+                    } else if (lastAsteroid > Math.abs(asteroid)) {
+                        // The right-moving asteroid survives
+                        stack.push(lastAsteroid);
+                        break; // Skip pushing asteroid onto stack
+                    }
+                    // Continue checking for collisions with the next asteroid on the stack
+                }
+                // If the stack is empty, or the left-moving asteroid survives, push it onto the stack
+                if (stack.length === 0 || stack[stack.length - 1] < 0) {
+                    stack.push(asteroid);
+                } else if (stack[stack.length - 1] === Math.abs(asteroid)) {
+                    // Both asteroids explode
+                    stack.pop();
+                }
+            }
+        }
+    
+        return stack;
+    };
+    console.log(asteroidCollision([8, -8]))
