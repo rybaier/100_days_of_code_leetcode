@@ -1248,33 +1248,36 @@ var closeStrings = function(word1, word2) {
         for (const asteroid of asteroids) {
             if (asteroid > 0) {
                 // Asteroid moving to the right, just push it onto the stack
-               console.log(stack.push(asteroid))
+                stack.push(asteroid);
             } else {
                 // Asteroid moving to the left
-                while (stack.length > 0 && stack[stack.length -1] > 0) {
+                let exploded = false;
+    
+                while (stack.length > 0 && stack[stack.length - 1] > 0) {
                     // Check for collisions
                     const lastAsteroid = stack.pop();
-                    console.log(lastAsteroid)
+    
                     if (lastAsteroid === Math.abs(asteroid)) {
                         // Both asteroids explode
+                        exploded = true;
                         break; // Skip pushing asteroid onto stack
                     } else if (lastAsteroid > Math.abs(asteroid)) {
                         // The right-moving asteroid survives
                         stack.push(lastAsteroid);
+                        exploded = true;
                         break; // Skip pushing asteroid onto stack
                     }
                     // Continue checking for collisions with the next asteroid on the stack
                 }
-                // If the stack is empty, or the left-moving asteroid survives, push it onto the stack
-                if (stack.length === 0 || stack[stack.length - 1] < 0) {
+    
+                // If the stack is empty or the left-moving asteroid survives, push it onto the stack
+                if (!exploded && (stack.length === 0 || stack[stack.length - 1] < 0)) {
                     stack.push(asteroid);
-                } else if (stack[stack.length - 1] === Math.abs(asteroid)) {
-                    // Both asteroids explode
-                    stack.pop();
                 }
             }
         }
     
         return stack;
     };
+    
     console.log(asteroidCollision([8, -8]))

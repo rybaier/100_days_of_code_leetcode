@@ -145,9 +145,14 @@ had to spend some time figuring this one out. and it took some research as well
  - https://github.com/rybaier/100-days-of-code/blob/master/js%20playground/index.js 
  - Jan 26
 
-  ## Day 25 
+## Day 25 
 worked on it for 30 min still failing the current test case
  - lines 1231 - 1280
  - https://github.com/rybaier/100-days-of-code/blob/master/js%20playground/index.js 
  - Jan 27
  
+## Day 26 
+spent more time researching and finally figured out a way to pass all the test cases 
+ - lines 1231 - 1280
+ - https://github.com/rybaier/100-days-of-code/blob/master/js%20playground/index.js 
+ - Jan 28
