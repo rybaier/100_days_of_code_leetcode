@@ -153,6 +153,12 @@ worked on it for 30 min still failing the current test case
  
 ## Day 26 
 spent more time researching and finally figured out a way to pass all the test cases 
- - lines 1231 - 1280
+ - lines 1231 - 1282
  - https://github.com/rybaier/100-days-of-code/blob/master/js%20playground/index.js 
  - Jan 28
+
+ ## Day 27 
+Solved the problem using a stack approach
+ - lines 1285 - 1328
+ - https://github.com/rybaier/100-days-of-code/blob/master/js%20playground/index.js 
+ - Jan 30

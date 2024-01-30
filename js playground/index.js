@@ -1280,4 +1280,49 @@ var closeStrings = function(word1, word2) {
         return stack;
     };
     
-    console.log(asteroidCollision([8, -8]))
+    // console.log(asteroidCollision([8, -8]))
+
+//     Given an encoded string, return its decoded string.
+
+// The encoding rule is: k[encoded_string], where the encoded_string inside
+//  the square brackets is being repeated exactly k times. 
+//  Note that k is guaranteed to be a positive integer.
+
+// You may assume that the input string is always valid; 
+// there are no extra white spaces, square brackets are well-formed, etc.
+//  Furthermore, you may assume that the original data does not 
+//  contain any digits and that digits are only for those repeat numbers, k. 
+//  For example, there will not be input like 3a or 2[4].
+
+// The test cases are generated so that the length of the 
+// output will never exceed 10^5.
+
+var decodeString = function(s) {
+    const stack = [];
+    let currentNumber = 0;
+    let currentString = '';
+
+    for (const char of s) {
+        if (char >= '0' && char <= '9') {
+            // Accumulate the number
+            currentNumber = currentNumber * 10 + parseInt(char);
+        } else if (char === '[') {
+            // Push the current result and multiplier onto the stack
+            stack.push({ currentString, currentNumber });
+            // Reset currentString and currentNumber
+            currentString = '';
+            currentNumber = 0;
+        } else if (char === ']') {
+            // Pop from the stack and update currentString and currentNumber
+            const { currentString: prevString, currentNumber: multiplier } = stack.pop();
+            currentString = prevString + currentString.repeat(multiplier);
+        } else {
+            // Append letters to currentString
+            currentString += char;
+        }
+    }
+
+    return currentString;
+};
+
+console.log(decodeString("3[a]2[bc]"))
