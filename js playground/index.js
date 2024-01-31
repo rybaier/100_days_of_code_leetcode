@@ -1325,4 +1325,44 @@ var decodeString = function(s) {
     return currentString;
 };
 
-console.log(decodeString("3[a]2[bc]"))
+// console.log(decodeString("3[a]2[bc]"))
+
+// You have a RecentCounter class which counts the number of recent
+//  requests within a certain time frame.
+
+// Implement the RecentCounter class:
+
+// RecentCounter() Initializes the counter with zero recent requests.
+// int ping(int t) Adds a new request at time t, 
+// where t represents some time in milliseconds, and 
+// returns the number of requests that has happened in the past 
+// 3000 milliseconds (including the new request). 
+// Specifically, return the number of requests that have happened in the inclusive range [t - 3000, t].
+// It is guaranteed that every call to ping uses a strictly larger value of t than the previous call.
+
+class RecentCounter {
+    constructor() {
+        this.requests = [];
+    }
+
+    ping(t) {
+        // Add the current timestamp to the queue
+        this.requests.push(t);
+
+        // Remove timestamps that are outside the 3000 milliseconds window
+        while (this.requests[0] < t - 3000) {
+            this.requests.shift();
+        }
+
+        // Return the number of requests within the window
+        return this.requests.length;
+    }
+}
+
+// Example usage:
+const recentCounter = new RecentCounter();
+console.log(recentCounter.ping(1)); // Output: 1
+console.log(recentCounter.ping(100)); // Output: 2
+console.log(recentCounter.ping(3001)); // Output: 3
+console.log(recentCounter.ping(3002)); // Output: 3
+console.log(recentCounter.ping(2000)); // Output: 3
