@@ -165,6 +165,13 @@ Solved the problem using a stack approach
 
   ## Day 28
 class and a queue
- - lines 1285 - 1328
+ - lines 1328 - 1368
  - https://github.com/rybaier/100-days-of-code/blob/master/js%20playground/index.js 
- - Jan 30
+ - Jan 31
+
+  ## Day 29
+2 queues
+ - lines 1370 - 1419
+ - https://github.com/rybaier/100-days-of-code/blob/master/js%20playground/index.js 
+ - Jan 31
+ 
