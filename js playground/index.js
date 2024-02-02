@@ -1359,13 +1359,13 @@ class RecentCounter {
     }
 }
 
-// Example usage:
+
 const recentCounter = new RecentCounter();
-console.log(recentCounter.ping(1)); // Output: 1
-console.log(recentCounter.ping(100)); // Output: 2
-console.log(recentCounter.ping(3001)); // Output: 3
-console.log(recentCounter.ping(3002)); // Output: 3
-console.log(recentCounter.ping(2000)); // Output: 4
+// console.log(recentCounter.ping(1)); // Output: 1
+// console.log(recentCounter.ping(100)); // Output: 2
+// console.log(recentCounter.ping(3001)); // Output: 3
+// console.log(recentCounter.ping(3002)); // Output: 3
+// console.log(recentCounter.ping(2000)); // Output: 4
 
 // In the world of Dota2, there are two parties: the Radiant and the Dire.
 
@@ -1415,4 +1415,50 @@ var predictPartyVictory = function(senate) {
 
 const senate = "RDD";
 const result = predictPartyVictory(senate);
-console.log(result); // Output: "Dire"
+// console.log(result); // Output: "Dire"
+
+
+// You are given the head of a linked list. Delete the middle node, 
+// and return the head of the modified linked list.
+
+// The middle node of a linked list of size n is the ⌊n / 2⌋th node 
+// from the start using 0-based indexing, where ⌊x⌋ denotes the largest integer less than or equal to x.
+
+// For n = 1, 2, 3, 4, and 5, the middle nodes are 0, 1, 1, 2, and 2, respectively.
+
+class ListNode {
+    constructor(val, next = null) {
+        this.val = val;
+        this.next = next;
+    }
+}
+
+var deleteMiddleNode = function(head) {
+    if (!head || !head.next) {
+        // There is no middle node for an empty list or a list with one node
+        return null;
+    }
+
+    let slow = head;
+    let fast = head;
+    let prev = null;
+
+    while (fast && fast.next) {
+        prev = slow;
+        slow = slow.next;
+        fast = fast.next.next;
+    }
+
+    // Delete the middle node by adjusting the next pointer of the previous node
+    prev.next = slow.next;
+
+    return head;
+};
+
+// const list = new ListNode(1, new ListNode(2, new ListNode(3, new ListNode(4, new ListNode(5)))));
+// console.log("Original List:");
+// console.log(list);
+
+// deleteMiddleNode(list);
+// console.log("\nModified List (after deleting middle node):");
+// console.log(list);

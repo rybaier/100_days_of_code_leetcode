@@ -173,5 +173,13 @@ class and a queue
 2 queues
  - lines 1370 - 1419
  - https://github.com/rybaier/100-days-of-code/blob/master/js%20playground/index.js 
- - Jan 31
+ - Feb 1
+
+   ## Day 30
+linked lists and deleting a node 
+ - lines 1421 - 1465
+ - https://github.com/rybaier/100-days-of-code/blob/master/js%20playground/index.js 
+ - Feb 2
+ 
+
  
