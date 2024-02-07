@@ -181,5 +181,18 @@ linked lists and deleting a node
  - https://github.com/rybaier/100-days-of-code/blob/master/js%20playground/index.js 
  - Feb 2
  
+## Day 31
+linked lists and sorting 
+ - lines 1467 - 
+ - https://github.com/rybaier/100-days-of-code/blob/master/js%20playground/index.js 
+ - Feb 5
+ 
 
+ ## Day 32
+This has now become a combination of leetcode problems or job problems. Having recently started a project I am working on updating authentication code for firebase in react native from namespace to modular. a trying exercise
+ - Feb 6
+ 
+ ## Day 33
+ A continuation of yesterday but much more progress made. Will add example code when completed 
+ - Feb 7
  

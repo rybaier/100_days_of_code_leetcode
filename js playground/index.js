@@ -1462,3 +1462,48 @@ var deleteMiddleNode = function(head) {
 // deleteMiddleNode(list);
 // console.log("\nModified List (after deleting middle node):");
 // console.log(list);
+
+
+// Given the head of a singly linked list, group all the nodes with
+//  odd indices together followed by the nodes with even indices, and return the reordered list.
+
+// The first node is considered odd, and the second node is even, and so on.
+
+// Note that the relative order inside both the even and odd groups should remain as it was in the input.
+
+// You must solve the problem in O(1) extra space complexity and O(n) time complexity.
+
+
+var oddEvenList = function(head) {
+    if (!head || !head.next) {
+        // No modification needed for an empty list or a list with one node
+        return head;
+    }
+
+    // Separate odd and even nodes into two separate linked lists
+    let oddHead = head;
+    let evenHead = head.next;
+    let odd = oddHead;
+    let even = evenHead;
+
+    while (even && even.next) {
+        odd.next = even.next;
+        odd = odd.next;
+        even.next = odd.next;
+        even = even.next;
+    }
+
+    // Combine the two linked lists
+    odd.next = evenHead;
+
+    return oddHead;
+};
+
+// Example usage:
+const list = new ListNode(1, new ListNode(2, new ListNode(3, new ListNode(4, new ListNode(5)))));
+console.log("Original List:");
+console.log(list);
+
+const reorderedList = oddEvenList(list);
+console.log("\nReordered List:");
+console.log(reorderedList);
