@@ -189,7 +189,7 @@ linked lists and sorting
  
 
  ## Day 32
-This has now become a combination of leetcode problems or job problems. Having recently started a project I am working on updating authentication code for firebase in react native from namespace to modular. a trying exercise
+This has now become a combination of leetcode problems or open source problems. Having recently started a project I am working on updating authentication code for firebase in react native from namespace to modular. a trying exercise
  - Feb 6
  
  ## Day 33
