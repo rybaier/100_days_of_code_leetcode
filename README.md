@@ -183,7 +183,7 @@ linked lists and deleting a node
  
 ## Day 31
 linked lists and sorting 
- - lines 1467 - 
+ - lines 1467 - 1510
  - https://github.com/rybaier/100-days-of-code/blob/master/js%20playground/index.js 
  - Feb 5
  
@@ -195,4 +195,9 @@ This has now become a combination of leetcode problems or job problems. Having r
  ## Day 33
  A continuation of yesterday but much more progress made. Will add example code when completed 
  - Feb 7
+
+ ## Day 34
+ completed the conversion for a tutorial you can find the completed code here
+ [React-Native-Firebase](https://github.com/rybaier/react-native-firebase)
+ After doing it my own repo I realized I should have forked and cloned the tutorials so I went back and did that which is located here [React-Native-Firebase-Tutorial](https://github.com/rybaier/react-native-firebaseModular)
  
