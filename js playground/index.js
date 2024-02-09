@@ -1426,6 +1426,7 @@ const result = predictPartyVictory(senate);
 
 // For n = 1, 2, 3, 4, and 5, the middle nodes are 0, 1, 1, 2, and 2, respectively.
 
+// This class is for following linked list problems lines 1421 - 
 class ListNode {
     constructor(val, next = null) {
         this.val = val;
@@ -1499,11 +1500,73 @@ var oddEvenList = function(head) {
     return oddHead;
 };
 
+// // Example usage:
+// const list = new ListNode(1, new ListNode(2, new ListNode(3, new ListNode(4, new ListNode(5)))));
+// console.log("Original List:");
+// console.log(list);
+// const reorderedList = oddEvenList(list);
+// console.log("\nReordered List:");
+// console.log(reorderedList);
+
+
+// Given the head of a singly linked list, reverse the list, and return the reversed list.
+// class ListNode {
+//     constructor(val, next = null) {
+//         this.val = val;
+//         this.next = next;
+//     }
+// }
+
+//  iteravively reversed
+var reverseList = function(head) {
+    let prev = null;
+    let current = head;
+
+    while (current !== null) {
+        const nextTemp = current.next; // Store the next node temporarily
+        current.next = prev; // Reverse the pointer to the previous node
+        prev = current; // Move prev to the current node
+        current = nextTemp; // Move current to the next node
+    }
+
+    // At the end of the loop, prev will point to the new head of the reversed list
+    return prev;
+};
+
 // Example usage:
 const list = new ListNode(1, new ListNode(2, new ListNode(3, new ListNode(4, new ListNode(5)))));
 console.log("Original List:");
 console.log(list);
 
-const reorderedList = oddEvenList(list);
-console.log("\nReordered List:");
-console.log(reorderedList);
+const reversedList = reverseList(list);
+console.log("\nReversed List:");
+console.log(reversedList);
+
+
+var recursionReverseList = function(head) {
+    // Base case: if head is null or head.next is null, return head
+    if (!head || !head.next) {
+        return head;
+    }
+
+    // Recursively reverse the rest of the list
+    const reversedListHead = recursionReverseList(head.next);
+
+    // Reverse the pointer of the next node to point back to the current node
+    head.next.next = head;
+
+    // Set the current node's next pointer to null (to make it the last node)
+    head.next = null;
+
+    // Return the new head of the reversed list
+    return reversedListHead;
+};
+
+// Example usage:
+const listR = new ListNode(1, new ListNode(2, new ListNode(3, new ListNode(4, new ListNode(5)))));
+console.log("Original List:");
+console.log(listR);
+
+const reversedListR = recursionReverseList(listR);
+console.log("\nReversed List:");
+console.log(reversedList);
