@@ -207,3 +207,9 @@ This has now become a combination of leetcode problems or open source problems. 
 first I noticed that all my links in the readme were to the wrong repo... after fixing all of those I did a quick reverse a linked list problem solved both interatively and recursively
 - feb 9 
 - lines 1512 - 1573
+
+## Day 36 
+Maximum Twin Sum of a Linked List
+- lines 1575 - 1626
+- Feb 11  
+- https://github.com/rybaier/100_days_of_code_leetcode/blob/main/examples.js 

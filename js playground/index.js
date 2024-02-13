@@ -1563,10 +1563,63 @@ var recursionReverseList = function(head) {
 };
 
 // Example usage:
-const listR = new ListNode(1, new ListNode(2, new ListNode(3, new ListNode(4, new ListNode(5)))));
-console.log("Original List:");
-console.log(listR);
+// const listR = new ListNode(1, new ListNode(2, new ListNode(3, new ListNode(4, new ListNode(5)))));
+// console.log("Original List:");
+// console.log(listR);
 
-const reversedListR = recursionReverseList(listR);
-console.log("\nReversed List:");
-console.log(reversedList);
+// const reversedListR = recursionReverseList(listR);
+// console.log("\nReversed List:");
+// console.log(reversedList);
+
+// class ListNode {
+//     constructor(val, next = null) {
+//         this.val = val;      // Value of the node
+//         this.next = next;    // Pointer to the next node
+//     }
+// }
+
+var maxTwinSum = function(head) {
+    let maxSum = 0;         // Variable to store the maximum twin sum
+    let slow = head;        // Pointer to traverse the list slowly
+    let fast = head;        // Pointer to traverse the list fastly
+
+    // Finding the middle of the list using a two-pointer approach
+    while (fast && fast.next) {
+        fast = fast.next.next;  // Fast pointer moves two steps at a time
+        slow = slow.next;       // Slow pointer moves one step at a time
+    }
+
+    // Reversing the second half of the list to make finding twin nodes easier
+    let prev = null;            // Pointer to the previous node (initialized to null)
+    let curr = slow;            // Pointer to the current node (starting from the middle)
+    while (curr) {
+        const next = curr.next;     // Store the next node temporarily
+        curr.next = prev;           // Reverse the link to point backwards
+        prev = curr;                // Move prev pointer to the current node
+        curr = next;                // Move curr pointer to the next node
+    }
+
+    // Reset pointers for traversal: fast to the head, slow to the end of the reversed half
+    fast = head;
+    slow = prev;
+
+    // Traverse both halves of the list simultaneously and calculate twin sums
+    while (slow) {
+        // Update maxSum with the maximum twin sum encountered
+        maxSum = Math.max(maxSum, fast.val + slow.val);
+        // Move both pointers forward
+        fast = fast.next;
+        slow = slow.next;
+    }
+
+    // Return the maximum twin sum
+    return maxSum;
+};
+
+// Example usage:
+const maxSumList = new ListNode(1, new ListNode(2, new ListNode(3, new ListNode(4))));
+console.log("Original List:");
+console.log(maxSumList);
+
+console.log("\nMaximum Twin Sum:");
+console.log(maxTwinSum(maxSumList)); // Output will be 5 (2 + 3)
