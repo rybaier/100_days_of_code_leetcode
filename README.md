@@ -1,5 +1,5 @@
 # 100 Days of code Log Round 2
-Didn't make it far last time before having to break the streak. This year I am going to complete 100 days of code, specifically LeetCode problems
+Didn't make it far last time before having to break the streak. This year I am going to complete 100 days of code, focusing on LeetCode problems and other personal projects
 
 ## Day 1 - 1/2/23
 Started the LeetCode 75 Interview Question prep. Today's problem was to merge strings alternately. I used javascript to solve this problem writing a series of conditionals with nested loops. First I split each word into a seperate array and then pushed each index of the array in alteranting order until both words were finished
@@ -198,8 +198,7 @@ This has now become a combination of leetcode problems or open source problems. 
  - https://github.com/rybaier/100_days_of_code_leetcode/blob/main/examples.js 
 
  ## Day 34
- completed the conversion for a tutorial you can find the completed code here
- [React-Native-Firebase](https://github.com/rybaier/react-native-firebase)
+ completed the conversion for a tutorial you can find the completed code.
  After doing it my own repo I realized I should have forked and cloned the tutorials so I went back and did that which is located here [React-Native-Firebase-Tutorial](https://github.com/rybaier/react-native-firebaseModular) and made a pull request
  - Feb 8
  
@@ -211,5 +210,23 @@ first I noticed that all my links in the readme were to the wrong repo... after 
 ## Day 36 
 Maximum Twin Sum of a Linked List
 - lines 1575 - 1626
-- Feb 11  
+- Feb 12  
 - https://github.com/rybaier/100_days_of_code_leetcode/blob/main/examples.js 
+
+## Day 37 
+continuing work on my React Native Firebase repo added a loadscreen
+- Feb 13  
+- [React-Native-Firebase](https://github.com/rybaier/react-native-firebase)
+
+## Day 38 
+continuing work on my React Native firebase repo. reconfigured load screen and app.js
+- Feb 15 
+- [React-Native-Firebase](https://github.com/rybaier/react-native-firebase)
+
+## Day 39 
+continuing work on my React Native firebase repo. wrote new firestore rules to limit authenticated user access
+- Feb 16  
+- firestore rules are in the example.js file lines 162 - 175
+- [React-Native-Firebase](https://github.com/rybaier/react-native-firebase)
+
+

@@ -157,3 +157,19 @@ export default function HomeScreen(props, {extraData}) {
         </View>
     )
 }
+
+
+//FIRESTORE RULES for limiting authenticated access to user specific data
+// rules_version = '2';
+
+// service cloud.firestore {
+//   match /databases/{database}/documents {
+//    match /users/{userId} {
+//   	allow read: if request.auth != null && request.auth.uid == userId;
+// 		}
+//    match /entities/{entityId} {
+//   	allow read, write: if request.auth != null && request.auth.uid == resource.data.authorID;
+// 		}
+
+//   }
+// }
