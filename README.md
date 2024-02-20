@@ -229,4 +229,10 @@ continuing work on my React Native firebase repo. wrote new firestore rules to l
 - firestore rules are in the example.js file lines 162 - 175
 - [React-Native-Firebase](https://github.com/rybaier/react-native-firebase)
 
+## Day 40 
+continuing work on my React Native firebase repo. added update and delete options for firestore database from homescreen with collapsible input and button. 
+- Feb 19  
+- [React-Native-Firebase](https://github.com/rybaier/react-native-firebase)
+
+
 
