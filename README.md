@@ -234,5 +234,8 @@ continuing work on my React Native firebase repo. added update and delete option
 - Feb 19  
 - [React-Native-Firebase](https://github.com/rybaier/react-native-firebase)
 
+## Day 41 - 47
+continued focus toward continuing the react native firebase repo with multiple features and will then push all changes toward the app. Additionally I went down to Developer Week 2024 so multiple days were missed due to traveling. I will be continuing the project daily and will attempt to keep a better daily log here of the changes. I will backdate using my commit messages as a guide. I have implented one SSO option and it took some work around for it to finally work, went down the wrong path for a while before backing up simplifying it then fixing where I went wrong. 
 
-
+- Feb 20 - 26  
+- [React-Native-Firebase](https://github.com/rybaier/react-native-firebase)
